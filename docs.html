@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1">
+<title>@reeywhaar/notifications 1.0.0a1 &#8212; Notifications Web Component</title>
+<meta name="description" content="Notifications Web Component">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+<style>
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #2B303E;
+    -webkit-font-smoothing: antialiased;
+}
+
+.jumbotron h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.jumbotron h1,
+.jumbotron h1 a {
+    color: #eee;
+}
+
+.jumbotron small {
+    font-weight: 200;
+    color: #777;
+}
+
+.jumbotron p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    line-height: 1.2;
+    color: #ccc;
+}
+
+.wrap {
+    padding: 2rem 1rem;
+}
+
+.search {
+    margin: 0 0 1rem 0;
+    width: 90%;
+}
+
+.menu {
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li ul {
+    padding: 0;
+}
+
+.menu li a {
+    display: block;
+    padding: .25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu .file {
+    color: #E54D89;
+}
+
+.menu .file + ul {
+    margin: 0 0 1rem 0;
+}
+
+.menu .scope-private a {
+    color: #8BAAC6;
+}
+
+.method {
+    margin: 0 0 4rem 0;
+}
+
+.method .method-name {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.method .method-name + .scope-private {
+    color: #AAAAAA;
+}
+
+.method section {
+    margin: 2rem 0;
+}
+
+.method h3 {
+    margin: 0 0 1rem 0;
+}
+
+.method .table,
+.method .table p,
+.method .table ol,
+.method .table ul {
+    margin: 0;
+}
+
+.permalink {
+    position: absolute;
+    margin-left: -1em;
+    font-weight: normal;
+    color: #eee;
+    text-decoration: none;
+}
+
+.permalink:hover {
+    color: #E54D89;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: .5rem .6rem;
+    line-height: 1;
+    background: #fff;
+    z-index: 999;
+}
+
+.back-to-top.visible {
+    display: block;
+}
+
+.back-to-top svg {
+    vertical-align: middle;
+}
+
+.bs-footer {
+    margin: 3rem auto;
+    color: #777;
+    text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="#" class="back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="13px" height="14px" viewBox="0 0 13 14"><path d="M7.18761156,13 L7.18761156,5.49249703 L10.4587853,5.49249703 L5.09931763,0.113558129 L-0.26015,5.49249703 L3.01102371,5.49249703 L3.01102371,13 L7.18761156,13 Z" fill="#428bca"></path></svg> Back to Top</a>
+
+<div class="jumbotron">
+
+    <div class="container">
+
+        <h1>
+                @reeywhaar/notifications
+            <small>1.0.0a1</small>
+        </h1>
+
+        <p>Notifications Web Component</p>
+
+    </div>
+
+</div>
+
+<div class="wrap">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3 hidden-sm hidden-xs">
+
+                <input type="search" class="form-control search" id="search-methods" placeholder="Search..." autocomplete="off">
+
+                <ul class="menu">
+
+
+                    <li>
+                        <a href="#behaviours.js" class="file"><b>behaviours.js</b></a>
+                        <ul>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#behaviours.js-closeaftermouseenter" title="closeAfterMouseEnter">closeAfterMouseEnter</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#behaviours.js-closeaftermouseleave" title="closeAfterMouseLeave">closeAfterMouseLeave</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#behaviours.js-closeonclick" title="closeOnClick">closeOnClick</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#behaviours.js-ensurehover" title="ensureHover">ensureHover</a>
+                        </li>
+
+
+                        </ul>
+
+                    </li>
+
+
+                    <li>
+                        <a href="#notifications.js" class="file"><b>notifications.js</b></a>
+                        <ul>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-new-content" title="new Content">new Content</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-content.prototype.constructor" title="Content.constructor">Content.constructor</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-new-notification" title="new Notification">new Notification</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.constructor" title="Notification.constructor">Notification.constructor</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.connectedcallback" title="Notification.connectedCallback">Notification.connectedCallback</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.disconnectedcallback" title="Notification.disconnectedCallback">Notification.disconnectedCallback</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.title" title="Notification.title">Notification.title</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.content" title="Notification.content">Notification.content</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.icon" title="Notification.icon">Notification.icon</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.time" title="Notification.time">Notification.time</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.level" title="Notification.level">Notification.level</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.closeable" title="Notification.closeable">Notification.closeable</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.prototype.remove" title="Notification.remove">Notification.remove</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.create" title="Notification.create">Notification.create</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notification.createinteractive" title="Notification.createInteractive">Notification.createInteractive</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-new-notifications" title="new Notifications">new Notifications</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.prototype.constructor" title="Notifications.constructor">Notifications.constructor</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.prototype.connectedcallback" title="Notifications.connectedCallback">Notifications.connectedCallback</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.prototype.disconnectedcallback" title="Notifications.disconnectedCallback">Notifications.disconnectedCallback</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.prototype.getnotifications" title="Notifications.getNotifications">Notifications.getNotifications</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.prototype.add" title="Notifications.add">Notifications.add</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.prototype.remove" title="Notifications.remove">Notifications.remove</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.prototype.removewithcontext" title="Notifications.removeWithContext">Notifications.removeWithContext</a>
+                        </li>
+
+
+                        <li class="method-link scope-public">
+                            <a href="#notifications.js-notifications.register" title="Notifications.register">Notifications.register</a>
+                        </li>
+
+
+                        </ul>
+
+                    </li>
+
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-9">
+
+
+                <a id="behaviours.js"></a>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="behaviours.js-closeaftermouseenter">
+                            <a href="#behaviours.js-closeaftermouseenter" class="permalink">#</a>
+                            <span class="method-name" title="closeAfterMouseEnter(el[, timeout, immediate])">closeAfterMouseEnter(el[, timeout, immediate])</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Closes Notification after mouseenter event</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>el</td>
+                                        <td>
+                                            <code>Notification</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>timeout</td>
+                                        <td>
+                                            <code>number</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>immediate</td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="behaviours.js-closeaftermouseleave">
+                            <a href="#behaviours.js-closeaftermouseleave" class="permalink">#</a>
+                            <span class="method-name" title="closeAfterMouseLeave(el[, timeout, immediate])">closeAfterMouseLeave(el[, timeout, immediate])</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Closes Notification after mouseleave event</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>el</td>
+                                        <td>
+                                            <code>Notification</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>timeout</td>
+                                        <td>
+                                            <code>number</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>immediate</td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="behaviours.js-closeonclick">
+                            <a href="#behaviours.js-closeonclick" class="permalink">#</a>
+                            <span class="method-name" title="closeOnClick(el[, immediate])">closeOnClick(el[, immediate])</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Close Notification on click anywhere in it</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>el</td>
+                                        <td>
+                                            <code>Notification</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>immediate</td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="behaviours.js-ensurehover">
+                            <a href="#behaviours.js-ensurehover" class="permalink">#</a>
+                            <span class="method-name" title="ensureHover(el)">ensureHover(el)</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Ensures that timeout will start count
+only after user hovered over notification</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>el</td>
+                                        <td>
+                                            <code>Notification</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+
+                <a id="notifications.js"></a>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-new-content">
+                            <a href="#notifications.js-new-content" class="permalink">#</a>
+                            <span class="method-name" title="new Content()">new Content()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Class for handling different types of content</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-content.prototype.constructor">
+                            <a href="#notifications.js-content.prototype.constructor" class="permalink">#</a>
+                            <span class="method-name" title="Content.constructor(content[, type&#x3D;&quot;text/plain&quot;])">Content.constructor(content[, type&#x3D;&quot;text/plain&quot;])</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>content</td>
+                                        <td>
+                                            <code>string</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>type&#x3D;&quot;text/plain&quot;</td>
+                                        <td>
+                                            <code>string</code>
+                                        </td>
+                                        <td><p>type of content, if set to &quot;text/html&quot; content
+will be set throught innerHTML property.
+all other types will be set through textContent property</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-new-notification">
+                            <a href="#notifications.js-new-notification" class="permalink">#</a>
+                            <span class="method-name" title="new Notification()">new Notification()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Notification WebComponent represents single item of {@link Notifications} component</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.constructor">
+                            <a href="#notifications.js-notification.prototype.constructor" class="permalink">#</a>
+                            <span class="method-name" title="Notification.constructor()">Notification.constructor()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Should not be called directly just like any HTMLElement</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.connectedcallback">
+                            <a href="#notifications.js-notification.prototype.connectedcallback" class="permalink">#</a>
+                            <span class="method-name" title="Notification.connectedCallback()">Notification.connectedCallback()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Setups connection logic.
+Emits &quot;connected&quot; event</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.disconnectedcallback">
+                            <a href="#notifications.js-notification.prototype.disconnectedcallback" class="permalink">#</a>
+                            <span class="method-name" title="Notification.disconnectedCallback()">Notification.disconnectedCallback()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Setups connection logic.
+Emits &quot;disconnected&quot; event</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.title">
+                            <a href="#notifications.js-notification.prototype.title" class="permalink">#</a>
+                            <span class="method-name" title="Notification.title()">Notification.title()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Title of the notification. Set only</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.content">
+                            <a href="#notifications.js-notification.prototype.content" class="permalink">#</a>
+                            <span class="method-name" title="Notification.content()">Notification.content()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Content of notification. Set only</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.icon">
+                            <a href="#notifications.js-notification.prototype.icon" class="permalink">#</a>
+                            <span class="method-name" title="Notification.icon()">Notification.icon()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Notification's icon. Getter returns string</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.time">
+                            <a href="#notifications.js-notification.prototype.time" class="permalink">#</a>
+                            <span class="method-name" title="Notification.time()">Notification.time()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Registered time after which element will be removed</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.level">
+                            <a href="#notifications.js-notification.prototype.level" class="permalink">#</a>
+                            <span class="method-name" title="Notification.level()">Notification.level()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Level of notification. Defined in NotificationLevel</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.closeable">
+                            <a href="#notifications.js-notification.prototype.closeable" class="permalink">#</a>
+                            <span class="method-name" title="Notification.closeable()">Notification.closeable()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Defines whether notification should show cross button</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.prototype.remove">
+                            <a href="#notifications.js-notification.prototype.remove" class="permalink">#</a>
+                            <span class="method-name" title="Notification.remove(immediate)">Notification.remove(immediate)</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Removes notification from DOM</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>immediate</td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td><p>if true element will be removed without transition</p>
+</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.create">
+                            <a href="#notifications.js-notification.create" class="permalink">#</a>
+                            <span class="method-name" title="Notification.create(data)">Notification.create(data)</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Creates notification</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>data</td>
+                                        <td>
+                                            <code>Object</code>
+                                        </td>
+                                        <td><p>notification data</p>
+</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>data.icon</td>
+                                        <td>
+                                            <code>string</code>
+                                            <code>HTMLImageElement</code>
+                                        </td>
+                                        <td><p>icon url or element</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>data.title</td>
+                                        <td>
+                                            <code>string</code>
+                                            <code>HTMLElement</code>
+                                            <code>Content</code>
+                                        </td>
+                                        <td><p>title of notification</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>data.content</td>
+                                        <td>
+                                            <code>string</code>
+                                            <code>HTMLElement</code>
+                                            <code>Content</code>
+                                        </td>
+                                        <td><p>content of notification</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>data.time</td>
+                                        <td>
+                                            <code>number</code>
+                                        </td>
+                                        <td><p>time after which notification will be closed.
+null if closeable manually, default is 7000</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>data.level</td>
+                                        <td>
+                                            <code>Symbol</code>
+                                        </td>
+                                        <td><p>level of notification. Defined in NotificationLevel</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>data.closeable</td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td><p>is notification closeable. Defines whether close icon will be shown</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>data.context</td>
+                                        <td>
+                                            <code>context</code>
+                                        </td>
+                                        <td><p>context associated with notification.
+main usage is to remove all notifications with certain context.</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notification.createinteractive">
+                            <a href="#notifications.js-notification.createinteractive" class="permalink">#</a>
+                            <span class="method-name" title="Notification.createInteractive(fn)">Notification.createInteractive(fn)</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Creates Notification by evaluating closure with &quot;remove&quot; closure arg</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>fn</td>
+                                        <td>
+                                            <code>CreateClosure</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-new-notifications">
+                            <a href="#notifications.js-new-notifications" class="permalink">#</a>
+                            <span class="method-name" title="new Notifications()">new Notifications()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Notifications WebComponent represents container for {@link Notification} component</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.prototype.constructor">
+                            <a href="#notifications.js-notifications.prototype.constructor" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.constructor()">Notifications.constructor()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Should not be called directly just like any HTMLElement</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.prototype.connectedcallback">
+                            <a href="#notifications.js-notifications.prototype.connectedcallback" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.connectedCallback()">Notifications.connectedCallback()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Emits &quot;conntected&quot; event</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.prototype.disconnectedcallback">
+                            <a href="#notifications.js-notifications.prototype.disconnectedcallback" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.disconnectedCallback()">Notifications.disconnectedCallback()</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Emits &quot;disconntected&quot; event</p>
+
+
+                        </div>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.prototype.getnotifications">
+                            <a href="#notifications.js-notifications.prototype.getnotifications" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.getNotifications([context])">Notifications.getNotifications([context])</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Returns list of current notifications, optionally matching context</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>context</td>
+                                        <td>
+                                            <code>any</code>
+                                        </td>
+                                        <td><p>context of notification to match, if null, all notifications will be returned</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+
+                                    <p>
+                                            <code>Array.&lt;Notification&gt;</code>
+                                    </p>
+
+                                    
+
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.prototype.add">
+                            <a href="#notifications.js-notifications.prototype.add" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.add(notification[, offset])">Notifications.add(notification[, offset])</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Adds notification to container element</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>notification</td>
+                                        <td>
+                                            <code>Notification</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>offset</td>
+                                        <td>
+                                            <code>number</code>
+                                        </td>
+                                        <td><p>offset. Negative offset will add notigication from the end: -1 makes notification last</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.prototype.remove">
+                            <a href="#notifications.js-notifications.prototype.remove" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.remove(notification, immediate)">Notifications.remove(notification, immediate)</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Removes notification from DOM</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>notification</td>
+                                        <td>
+                                            <code>Notification</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>immediate</td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td><p>if true element will be removed without transition</p>
+</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.prototype.removewithcontext">
+                            <a href="#notifications.js-notifications.prototype.removewithcontext" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.removeWithContext(context, immediate)">Notifications.removeWithContext(context, immediate)</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Removes all notifications with same context</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>context</td>
+                                        <td>
+                                            <code>any</code>
+                                        </td>
+                                        <td><p>context of notification</p>
+</td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>immediate</td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="method scope-public">
+
+                        <h2 id="notifications.js-notifications.register">
+                            <a href="#notifications.js-notifications.register" class="permalink">#</a>
+                            <span class="method-name" title="Notifications.register([name, notificationsStyle&#x3D;NotificationsStyle, notificationStyle&#x3D;NotificationStyle])">Notifications.register([name, notificationsStyle&#x3D;NotificationsStyle, notificationStyle&#x3D;NotificationStyle])</span>
+                        </h2>
+
+                        <div class="description lead">
+
+                            <p>Registers webcomponent</p>
+
+
+                        </div>
+
+
+                        <section class="parameters">
+
+                            <h3>Parameters</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                    <tr>
+                                        <td>name</td>
+                                        <td>
+                                            <code>string</code>
+                                        </td>
+                                        <td><p>name of the dom element, default: reey-notifications</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>notificationsStyle&#x3D;NotificationsStyle</td>
+                                        <td>
+                                            <code>string</code>
+                                            <code>URL</code>
+                                        </td>
+                                        <td><p>css string or link to css for notifications container</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>notificationStyle&#x3D;NotificationStyle</td>
+                                        <td>
+                                            <code>string</code>
+                                            <code>URL</code>
+                                        </td>
+                                        <td><p>css string or link to css for notification</p>
+</td>
+                                        <td>
+                                                <span class="tag tag-default">Optional</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+
+                        </section>
+
+
+
+
+                        <section class="returns">
+
+                            <h3>Returns</h3>
+
+
+                            <p><code>Void</code></p>
+
+
+                        </section>
+
+                    </div>
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="bs-footer">
+
+    <div class="container">
+
+        <p>Documentation generated with <a href="https://github.com/neogeek/doxdox">doxdox</a>.</p>
+
+    </div>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+
+(function () {
+
+    'use strict';
+
+    var headerHeight = $('.jumbotron').outerHeight(true),
+        $backToTop = $('.back-to-top');
+
+    function handleScrollEvent() {
+
+        if (window.scrollY > headerHeight && $backToTop.not('.visible')) {
+
+            $backToTop.addClass('visible');
+
+        } else if (window.scrollY < headerHeight && $backToTop.is('.visible')) {
+
+            $backToTop.removeClass('visible');
+
+        }
+
+    }
+
+    $('pre code:not(.hljs)').each(function () {
+        hljs.highlightBlock(this);
+    });
+
+    var $searchInput = $('#search-methods');
+    var $methodLinks = $('.method-link');
+    var $methodNames = $('.method .method-name');
+
+    var urlQuery = window.location.search.match(/q=([^&]+)/);
+
+    $searchInput.on('keyup', function (e) {
+
+        var query = new RegExp(e.target.value.replace(' ', '|'), 'ig');
+
+        $methodLinks.each(function () {
+
+            var $this = $(this);
+
+            if (!$this.text().match(query)) {
+
+                $this.hide();
+
+            } else {
+
+                $this.show();
+
+            }
+
+        });
+
+        $methodNames.each(function () {
+
+            var $this = $(this);
+
+            if (!$this.text().match(query)) {
+
+                $this.closest('.method').hide();
+
+            } else {
+
+                $this.closest('.method').show();
+
+            }
+
+        });
+
+        window.history.replaceState({}, '', window.location.pathname + '?q=' + e.target.value);
+
+    });
+
+    $searchInput.on('search', function () {
+
+        $searchInput.trigger('keyup');
+
+    });
+
+    if (urlQuery && urlQuery.length > 1) {
+
+        $searchInput.val(urlQuery[1]).trigger('keyup');
+
+    }
+
+    $(window).on('scroll', handleScrollEvent);
+
+    handleScrollEvent();
+
+})();
+
+</script>
+
+</body>
+</html>

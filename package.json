@@ -1,0 +1,18 @@
+{
+  "name": "@reeywhaar/notifications",
+  "version": "1.0.0a1",
+  "description": "Notifications Web Component",
+  "main": "notifications.js",
+  "keywords": [
+    "web component",
+    "component"
+  ],
+  "author": "Mikhail Vyrtsev",
+  "license": "MIT",
+	"scripts": {
+		"docs": "doxdox './*.js' --layout bootstrap --output docs.html"
+	},
+  "devDependencies": {
+    "doxdox": "^2.0.3"
+  }
+}
